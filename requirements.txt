@@ -1,0 +1,5 @@
+opencv-python
+logzero
+gdal==3.8.3
+wheel
+numpy

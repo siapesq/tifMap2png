@@ -3,6 +3,8 @@
   Simples ferramenta para converter geotiffs float32 para PNG aplicando um mapa de cor na imagem
 ### Exemplo de saida
 ![exemplo_saida](https://raw.githubusercontent.com/siapesq/tifMap2png/master/docs/assets/exemplo_saida.png)
+### Exemplo de entrada
+![exemplo_entrada](https://raw.githubusercontent.com/siapesq/tifMap2png/master/docs/assets/exemplo_entrada.png)
 ### Uso
       python tifMap2png input.tiff output.png
       

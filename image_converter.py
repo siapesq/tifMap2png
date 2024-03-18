@@ -30,7 +30,6 @@ output_folder = "/home/ubuntu/map-api/png"
 # Cria o diretório de saída se ainda não existir
 os.makedirs(output_folder, exist_ok=True)
 
-# Processa cada arquivo TIFF encontrado no bucket
 for input_file in input_files:
     try:
         # Define o caminho completo do arquivo de saída
@@ -39,8 +38,9 @@ for input_file in input_files:
         # Faz o download do arquivo TIFF do bucket
         s3_client.download_file(bucket_name, input_file, output_file)
         
-        # Processa a imagem
-        process_image(input_file, output_file)
+        # Processa a imagem - agora usando o caminho local do arquivo baixado
+        process_image(output_file)  # Ajuste aqui para usar output_file
+        
     except Exception as e:
         print(f"Erro ao processar a imagem {input_file}: {e}")
 

@@ -25,7 +25,7 @@ response = s3_client.list_objects_v2(Bucket=bucket_name)
 input_files = [obj['Key'] for obj in response.get('Contents', []) if obj['Key'].endswith('.tif')]
 
 # Define o caminho para a pasta onde os arquivos PNG serão salvos
-output_folder = "/home/ubuntu/map-api/png"
+output_folder = "/home/ubuntu/png"
 
 # Cria o diretório de saída se ainda não existir
 os.makedirs(output_folder, exist_ok=True)
